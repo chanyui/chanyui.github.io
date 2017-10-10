@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Linux | My Octopress Blog]]></title>
+  <link href="http://chanyui.github.io/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://chanyui.github.io/"/>
+  <updated>2017-10-10T17:15:06+08:00</updated>
+  <id>http://chanyui.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Htop是个好东西]]></title>
+    <link href="http://chanyui.github.io/blog/2015/01/06/htop/"/>
+    <updated>2015-01-06T13:49:16+08:00</updated>
+    <id>http://chanyui.github.io/blog/2015/01/06/htop</id>
+    <content type="html"><![CDATA[<pre><code>Htop是一款运行于Linux系统监控与进程管理软件，用于取代Unix下传统的top。与top只提供最消耗资源的进程列表不同，htop提供所有进程的列表，并且使用彩色标识出处理器、swap和内存状态。
+</code></pre>
+
+<p>用户一般可以在top无法提供详尽系统信息的情况下选择安装并使用htop。比如，在查找应用程序的内存泄漏问题时。与top相比，htop提供更方便、光标控制的界面来杀死进程。
+htop用C语言编写，采用了ncurses库。htop的名称源于其作者的名字。</p>
+
+<h2>安装-htop</h2>
+
+<pre><code>yum -y install ncurses-devel #htop依赖ncurses
+cd /opt
+wget -c http://ncu.dl.sourceforge.net/project/htop/htop/1.0.2/htop-1.0.2.tar.gz
+tar xzf htop-1.0.2.tar.gz
+cd htop-1.0.2
+./configure
+make &amp;&amp; make install
+</code></pre>
+
+<h2>示例图片</h2>
+
+<p><img src="/images/2015/htop.gif" title="示例图片" alt="示例图片" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Linux-有用的命令]]></title>
+    <link href="http://chanyui.github.io/blog/2014/08/31/linux-useful-command/"/>
+    <updated>2014-08-31T18:57:18+08:00</updated>
+    <id>http://chanyui.github.io/blog/2014/08/31/linux-useful-command</id>
+    <content type="html"><![CDATA[<p>下面我将和大家分享一些学习Linux命令行的技巧，希望能对大家有所助益。如果在本文中遇到不太熟悉的命令，可以在终端中键入以下命令寻求帮助。
+Man <command>
+ Linux入门必备
+了解bash：没有必要钻研长篇累牍的bash使用手册，通过man bash学习即可。
+了解vi：你在工作中也许会使用Emacs或Eclipse，但vi不可替代。
+了解ssh：学习无密码验证的基础知识。
+bash作业管理基础知识：如使用&amp;、Ctrl-C、fg、bg、Ctrl-Z、jobs和kill等。
+文件管理命令：如硬链接和软链接，权限等。
+网络管理命令：如ifconfig等。
+如何使用正则表达式，如何使用grep、sed等。
+学习使用apt-get和yum管理软件包。
+提升日常工作效率</p>
+
+<p>在bash中，可以使用Ctrl+R命令搜索命令行历史记录。
+在bash中，可以使用Ctrl+W删除最后一个单词，使用Ctrl+U删除整行。
+使用cd -命令返回之前的工作目录，使用cd ..命令返回上层目录。
+学习如何使用xargs：
+$ find . -name *.py | xargs grep some_function<br/>
+$ cat hosts | xargs -I{} ssh root@{} hostnameX
+使用pstree -p命令查看进程树。
+了解不同的信号。例如，使用kill -STOP [PID]终止进程。详细的信号列表可以在man 7 signal中查看。
+如果你想让进程永远在后台运行，可以使用nohup和disown命令。
+使用netstat -lntp命令查看侦听进程，并参考lsof命令。
+在bash脚本中使用subshells对命令进行分组：</p>
+
+<h1>do something in current dir</h1>
+
+<p>(cd /some/other/dir; other-command)</p>
+
+<h1>continue in original dir</h1>
+
+<p>字符串修剪（Trimming Strings）：${var%suffix}和${var#prefix}。例如if var=foo.pdf then echo ${var%.pdf}.txt prints &ldquo;foo.txt"。
+命令的输出可以当做文件使用。例如，比较本地和远程的/etc/hosts文件：
+diff /etc/hosts &lt;(ssh somehost cat /etc/hosts)
+了解bash中的“here documents”。
+了解标准输出和标准错误重定向。
+了解ASCII代码表。可以在终端中运行man ascii命令作为参考。
+当通过ssh远程工作时，可以使用screen 或 dtach保存回话。
+对Web开发者而言，curl、wget等命令非常实用。
+将HTML页面转化文本文件：
+lynx -dump -stdin
+如果要掌握XML，xmlstarlet命令是非常好的工具。
+了解ssh端口映射。
+使用Alt+shift+3快捷键可以在行前添加注释“#”。
+数据处理</p>
+
+<p>了解sort和uniq命令。
+了解cut、paste和join命令。
+了解如何对文本文件做交集、并集和差集：
+cat a b | sort | uniq > c # c is a union b<br/>
+cat a b | sort | uniq -d > c # c is a intersect b<br/>
+cat a b b | sort | uniq -u > c # c is set difference a – b
+对文本文件的第二列做摘要，下面的代码要比同样的Python代码更精炼、快速（3倍）：
+awk &lsquo;{ x += $2 } END { print x }&rsquo;
+了解字符串和grep命令。
+文件分割：了解split（按大小分割）和csplit（按匹配分割）命令。
+系统诊断</p>
+
+<p>使用iostat、netstat、top和dstat命令查看磁盘、处理器和网络的状态。
+使用free、vmstat等命令了解系统内存状态。
+使用mtr网络诊断工具。
+使用iftop、nethogs等工具查看占用带宽的进程和带宽。
+使用ab工具快速洞悉Web服务器的性能。
+以wireshark和tshark命令应对复杂网络诊断。
+学习如何使用strace，并用于诊断运行的进程。这对分析程序运行错误的原因，非常有帮助。
+使用ldd命令查看共享库文件。
+了解如何使用gdb连接到运行中的进程，并进行堆栈跟踪。
+有关/proc的知识非常重要。
+如何诊断已发生的错误？Sar命令是一种很好的选择，它可以收集、保存并报告系统信息。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Linux命令行技巧]]></title>
+    <link href="http://chanyui.github.io/blog/2012/03/23/command-line-skill-of-linux/"/>
+    <updated>2012-03-23T13:18:37+08:00</updated>
+    <id>http://chanyui.github.io/blog/2012/03/23/command-line-skill-of-linux</id>
+    <content type="html"><![CDATA[<h2>编辑命令</h2>
+
+<pre><code>* Ctrl + a ：移到命令行首
+* Ctrl + e ：移到命令行尾
+* Ctrl + f ：按字符前移（右向）
+* Ctrl + b ：按字符后移（左向）
+* Alt + f ：按单词前移（右向）
+* Alt + b ：按单词后移（左向）
+* Ctrl + xx：在命令行首和光标之间移动
+* Ctrl + u ：从光标处删除至命令行首
+* Ctrl + k ：从光标处删除至命令行尾
+* Ctrl + w ：从光标处删除至字首
+* Alt + d ：从光标处删除至字尾
+* Ctrl + d ：删除光标处的字符
+* Ctrl + h ：删除光标前的字符
+* Ctrl + y ：粘贴至光标后
+* Alt + c ：从光标处更改为首字母大写的单词
+* Alt + u ：从光标处更改为全部大写的单词
+* Alt + l ：从光标处更改为全部小写的单词
+* Ctrl + t ：交换光标处和之前的字符
+* Alt + t ：交换光标处和之前的单词
+* Alt + Backspace：与 Ctrl + w 相同类似
+</code></pre>
+
+<h2>重新执行命令</h2>
+
+<pre><code>* Ctrl + r：逆向搜索命令历史
+* Ctrl + g：从历史搜索模式退出
+* Ctrl + p：历史中的上一条命令
+* Ctrl + n：历史中的下一条命令
+* Alt + .：使用上一条命令的最后一个参数
+</code></pre>
+
+<h2>控制命令</h2>
+
+<pre><code>* Ctrl + l：清屏
+* Ctrl + o：执行当前命令，并选择上一条命令
+* Ctrl + s：阻止屏幕输出
+* Ctrl + q：允许屏幕输出
+* Ctrl + c：终止命令
+* Ctrl + z：挂起命令
+</code></pre>
+
+<h2>Bang (!) 命令</h2>
+
+<pre><code>* !!：执行上一条命令
+* !blah：执行最近的以 blah 开头的命令，如 !ls
+* !blah:p：仅打印输出，而不执行
+* !$：上一条命令的最后一个参数，与 Alt + . 相同
+* !$:p：打印输出 !$ 的内容
+* !*：上一条命令的所有参数
+* !*:p：打印输出 !* 的内容
+* ^blah：删除上一条命令中的 blah
+* ^blah^foo：将上一条命令中的 blah 替换为 foo
+* ^blah^foo^：将上一条命令中所有的 blah 都替换为 foo
+</code></pre>
+
+<h2>注意：</h2>
+
+<pre><code>1. 以上介绍的大多数 Bash 快捷键仅当在 emacs 编辑模式时有效，若你将 Bash 配置为 vi 编辑模式，那将遵循 vi 的按键绑定。Bash 默认为 emacs 编辑模式。如果你的 Bash 不在 emacs 编辑模式，可通过 set -o emacs 设置。
+2. ^S、^Q、^C、^Z 是由终端设备处理的，可用 stty 命令设置。
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
