@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Javascript | My Octopress Blog]]></title>
+  <title><![CDATA[Category: Javascript | My Octopress]]></title>
   <link href="http://chanyui.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://chanyui.github.io/"/>
-  <updated>2017-10-10T17:15:06+08:00</updated>
+  <updated>2017-10-10T17:25:15+08:00</updated>
   <id>http://chanyui.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[yc]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
