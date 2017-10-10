@@ -1,11 +1,20 @@
+
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <title>Yum配置笔记 - My Octopress</title>
   <meta name="author" content="yc">
 
   
+  <meta name="description" content="YUM 优点 自动解决包的依赖性的问题能更新的添加/删除/更新/RPM包
+便于管理大量系统的更新问题
+可以同时配置多个资源库（Repository）
+简洁的配置文件(/etc/yum.conf)
+保持与RPM数据库的一致性
+有一个比较详细的log.可以查看何时升级了什么软件包 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -15,16 +24,13 @@
 
   
   <link rel="canonical" href="http://chanyui.github.io/blog/2012/03/02/note-of-yum/">
-  <link href="/favicon.png" type="image/png" rel="icon">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="My Octopress" type="application/atom+xml">
-
-  <!-- http://opengraphprotocol.org/ -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="http://chanyui.github.io/blog/2012/03/02/note-of-yum/">
-  <meta property="og:title" content="Yum配置笔记 - My Octopress">
-  
-
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <script src="/javascripts/libs/jquery/jquery-2.1.3.min.js"></script>
 
 <link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -32,20 +38,32 @@
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-  
-  <link href="/stylesheets/screen.css" media="screen, projection, print" rel="stylesheet" type="text/css">
-
   
 
 </head>
 
-  <body   >
-    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
-    <div id="wrap">
-      
-        <header role="banner">
-          <nav class="navbar navbar-default" role="navigation">
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress</a></h1>
+  
+    <h2>Prayer must be determined</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="chanyui.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<nav class="navbar navbar-default" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" title="toggle navbar" data-toggle="collapse" data-target=".navbar-collapse">
@@ -83,48 +101,31 @@
     </div>
 </nav>
 
-
-        </header>
-      
-      <div id="main" role="main" class="container">
-        <div id="content">
-          <div class="row">
-  <div class="page-content" itemscope itemtype="http://schema.org/Blog">
-    <meta itemprop="name" content="My Octopress" />
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
     
-    <meta itemprop="url" content="http://chanyui.github.io" />
-    <article class="hentry" role="article" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-      
-  <header class="page-header">
+      <h1 class="entry-title">Yum配置笔记</h1>
     
-      <p class="meta text-muted text-uppercase">
+    
+      <p class="meta">
         
 
 
 
 
-
-
-
-
-
-
-
-
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2012-03-02T10:11:18+08:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time>
+<time class='entry-date' datetime='2012-03-02T10:11:18+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2012</span></span> <span class='time'>10:11 am</span></time>
         
       </p>
-    
-    
-    <h1 class="entry-title" itemprop="name headline">
-        Yum配置笔记
-        
-    </h1>
     
   </header>
 
 
-<div class="entry-content clearfix" itemprop="articleBody description"><h3>YUM 优点</h3>
+<div class="entry-content"><h3>YUM 优点</h3>
 
 <p>自动解决包的依赖性的问题能更新的添加/删除/更新/RPM包
 便于管理大量系统的更新问题
@@ -331,86 +332,21 @@ rpm -ql yum-cron
 </div>
 
 
-      <footer class="post-footer">
-        <p class="meta text-muted">
-          
+  <footer>
+    <p class="meta">
+      
   
 
+<span class="byline author vcard">Posted by <span class="fn">yc</span></span>
 
-
-<figure class="author-image">
-    <span class="img" href="/about" style="background-image: url(/images/avatar.jpg)"><span class="hidden">Picture</span></span>
-</figure>
-
-<section class="author">
-    <h4><span class="byline author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="fn" itemprop="name">yc</span></span></h4>
-
-    <div class="author-meta">
-        <span class="author-link icon-link"><i class="fa fa-link" aria-hidden="true"></i> <a href="http://chanyui.github.io">http://chanyui.github.io</a></span>
-    </div>
-</section>
-
-<hr>
-
-<section class="share">
-    
-    <h4>Share this post</h4>
-    
-    <a class="fa fa-twitter" href="https://twitter.com/intent/tweet?url=http://chanyui.github.io/blog/2012/03/02/note-of-yum/;" 
-        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-        <span class="hidden">Twitter</span>
-    </a>
-    <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://chanyui.github.io/blog/2012/03/02/note-of-yum/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-        <span class="hidden">Facebook</span>
-    </a>
-    <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://chanyui.github.io/blog/2012/03/02/note-of-yum/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-        <span class="hidden">Google+</span>
-    </a>
-    
-</section>
+      
 
 
 
 
-<!--
-<footer class="post-footer">
+<time class='entry-date' datetime='2012-03-02T10:11:18+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2012</span></span> <span class='time'>10:11 am</span></time>
+      
 
-
-            <section class="share">
-                <h4>Share this post</h4>
-                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Instant%20Movie%20Streamer%20v3%20Release&amp;url=http://iyask.me/instant-movie-streamer-v3-release/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    <span class="hidden">Twitter</span>
-                </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://iyask.me/instant-movie-streamer-v3-release/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                    <span class="hidden">Facebook</span>
-                </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://iyask.me/instant-movie-streamer-v3-release/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                    <span class="hidden">Google+</span>
-                </a>
-            </section>
-
-
-        </footer>
-
-
--->
-          
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2012-03-02T10:11:18+08:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time>
-          <br>
-
-<span class="glyphicon glyphicon-tags"></span>&nbsp;
 <span class="categories">
   
     <a class='category' href='/blog/categories/shell/'>shell</a>
@@ -418,49 +354,70 @@ rpm -ql yum-cron
 </span>
 
 
-        </p>
-        
-          <div class="pager">
-            
-            
-              
-                <a href="/blog/2012/01/17/understand-mysql-charset/" class="col-xs-12 col-md-4 btn btn-default" title="Previous Post: 理解Mysql字符集设置"> 
-                  <div class="text-muted">
-                    <small>Previous Post</small>
-                  </div>
-                  <div class="pager-title">
-                    <h4>理解Mysql字符集设置</h4>
-                  </div>
-                </a>
-              
-            
-            
-            
-              
-              <a href="/blog/2012/03/23/command-line-skill-of-linux/" class="col-xs-12 col-md-4 btn btn-default pull-right" title="Next Post: linux命令行技巧">
-                <div class="text-muted">
-                  <small>Next Post</small>
-                </div>
-                <div class="pager-title">
-                  <h4>linux命令行技巧</h4>
-                </div>
-              </a>
-              
-            
-            
-          </div>
-        
-      </footer>
-    </article>
+    </p>
     
-  </div>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://chanyui.github.io/blog/2012/03/02/note-of-yum/" data-via="" data-counturl="http://chanyui.github.io/blog/2012/03/02/note-of-yum/" >Tweet</a>
+  
+  
+  
 </div>
 
-        </div>
-      </div>
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/01/17/understand-mysql-charset/" title="Previous Post: 理解Mysql字符集设置">&laquo; 理解Mysql字符集设置</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/03/23/command-line-skill-of-linux/" title="Next Post: linux命令行技巧">linux命令行技巧 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2017/08/10/shell-history/">Shell History 命令扩展</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/05/07/ffmpeg/">Ffmpeg使用</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/06/htop/">Htop是个好东西</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/19/css-clearfix/">Css-clearfix</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/19/mysql-prompt-metachar/">MySQL 的 Prompt 转义字符</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
     </div>
-    <footer role="contentinfo"><div class="container">
-    <p class="text-muted credits">
+  </div>
+  <footer role="contentinfo"><p class="text-muted credits">
   Copyright &copy; 2017 - yc<br>
   <small>
       <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>,
@@ -468,9 +425,8 @@ rpm -ql yum-cron
   </small>
 </p>
 
-</div>
 </footer>
-    
+  
 
 
 
@@ -493,5 +449,5 @@ rpm -ql yum-cron
 <script src="/javascripts/modernizr.js"></script>
 
 
-  </body>
+</body>
 </html>
