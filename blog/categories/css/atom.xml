@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Css | blog.dzdress.com]]></title>
-  <link href="http://chanyui.github.io/blog/categories/css/atom.xml" rel="self"/>
-  <link href="http://chanyui.github.io/"/>
-  <updated>2017-10-17T10:21:17+08:00</updated>
-  <id>http://chanyui.github.io/</id>
+  <link href="http://blog.dzdress.com/blog/categories/css/atom.xml" rel="self"/>
+  <link href="http://blog.dzdress.com/"/>
+  <updated>2017-10-19T11:15:51+08:00</updated>
+  <id>http://blog.dzdress.com/</id>
   <author>
     <name><![CDATA[yc]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Css-clearfix]]></title>
-    <link href="http://chanyui.github.io/blog/2014/10/19/css-clearfix/"/>
+    <link href="http://blog.dzdress.com/blog/2014/10/19/css-clearfix/"/>
     <updated>2014-10-19T11:20:41+08:00</updated>
-    <id>http://chanyui.github.io/blog/2014/10/19/css-clearfix</id>
+    <id>http://blog.dzdress.com/blog/2014/10/19/css-clearfix</id>
     <content type="html"><![CDATA[<pre><code>&lt;style&gt;
 .clearfix:after{
     visibility: hidden;

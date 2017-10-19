@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Javascript | blog.dzdress.com]]></title>
-  <link href="http://chanyui.github.io/blog/categories/javascript/atom.xml" rel="self"/>
-  <link href="http://chanyui.github.io/"/>
-  <updated>2017-10-17T10:21:17+08:00</updated>
-  <id>http://chanyui.github.io/</id>
+  <link href="http://blog.dzdress.com/blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://blog.dzdress.com/"/>
+  <updated>2017-10-19T11:15:51+08:00</updated>
+  <id>http://blog.dzdress.com/</id>
   <author>
     <name><![CDATA[yc]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[jQuery.extend()函数注释说明]]></title>
-    <link href="http://chanyui.github.io/blog/2013/08/30/jquery-extend-method/"/>
+    <link href="http://blog.dzdress.com/blog/2013/08/30/jquery-extend-method/"/>
     <updated>2013-08-30T14:11:50+08:00</updated>
-    <id>http://chanyui.github.io/blog/2013/08/30/jquery-extend-method</id>
+    <id>http://blog.dzdress.com/blog/2013/08/30/jquery-extend-method</id>
     <content type="html"><![CDATA[<ul>
 <li>// 第一个参数是true，则会迭代合并</li>
 <li>// 合并两个或更多对象的属性到第一个对象中，jQuery后续的大部分功能都通过该函数扩展</li>

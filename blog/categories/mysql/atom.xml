@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Mysql | blog.dzdress.com]]></title>
-  <link href="http://chanyui.github.io/blog/categories/mysql/atom.xml" rel="self"/>
-  <link href="http://chanyui.github.io/"/>
-  <updated>2017-10-17T10:21:17+08:00</updated>
-  <id>http://chanyui.github.io/</id>
+  <link href="http://blog.dzdress.com/blog/categories/mysql/atom.xml" rel="self"/>
+  <link href="http://blog.dzdress.com/"/>
+  <updated>2017-10-19T11:15:51+08:00</updated>
+  <id>http://blog.dzdress.com/</id>
   <author>
     <name><![CDATA[yc]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[MySQL 的 Prompt 转义字符]]></title>
-    <link href="http://chanyui.github.io/blog/2014/10/19/mysql-prompt-metachar/"/>
+    <link href="http://blog.dzdress.com/blog/2014/10/19/mysql-prompt-metachar/"/>
     <updated>2014-10-19T10:53:38+08:00</updated>
-    <id>http://chanyui.github.io/blog/2014/10/19/mysql-prompt-metachar</id>
+    <id>http://blog.dzdress.com/blog/2014/10/19/mysql-prompt-metachar</id>
     <content type="html"><![CDATA[<pre><code>\c    ：A counter that increments for each statement you issue
 \D    ：The full current date
 \d    ：The default database
@@ -52,9 +52,9 @@
   
   <entry>
     <title type="html"><![CDATA[理解Mysql字符集设置]]></title>
-    <link href="http://chanyui.github.io/blog/2012/01/17/understand-mysql-charset/"/>
+    <link href="http://blog.dzdress.com/blog/2012/01/17/understand-mysql-charset/"/>
     <updated>2012-01-17T10:39:27+08:00</updated>
-    <id>http://chanyui.github.io/blog/2012/01/17/understand-mysql-charset</id>
+    <id>http://blog.dzdress.com/blog/2012/01/17/understand-mysql-charset</id>
     <content type="html"><![CDATA[<h3>基本概念</h3>
 
 <ul>

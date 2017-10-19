@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://chanyui.github.io/sitemap.xml 
+Sitemap: http://blog.dzdress.com/sitemap.xml 

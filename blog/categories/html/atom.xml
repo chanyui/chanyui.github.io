@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Html | blog.dzdress.com]]></title>
-  <link href="http://chanyui.github.io/blog/categories/html/atom.xml" rel="self"/>
-  <link href="http://chanyui.github.io/"/>
-  <updated>2017-10-17T10:21:17+08:00</updated>
-  <id>http://chanyui.github.io/</id>
+  <link href="http://blog.dzdress.com/blog/categories/html/atom.xml" rel="self"/>
+  <link href="http://blog.dzdress.com/"/>
+  <updated>2017-10-19T11:15:51+08:00</updated>
+  <id>http://blog.dzdress.com/</id>
   <author>
     <name><![CDATA[yc]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[html-DocType]]></title>
-    <link href="http://chanyui.github.io/blog/2014/08/31/html-doctype/"/>
+    <link href="http://blog.dzdress.com/blog/2014/08/31/html-doctype/"/>
     <updated>2014-08-31T19:29:52+08:00</updated>
-    <id>http://chanyui.github.io/blog/2014/08/31/html-doctype</id>
+    <id>http://blog.dzdress.com/blog/2014/08/31/html-doctype</id>
     <content type="html"><![CDATA[<p>&lt;!doctype html></p>
 
 <ol>
